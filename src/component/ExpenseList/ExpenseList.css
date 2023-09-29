@@ -1,0 +1,44 @@
+.list-wrapper {
+  background-color: rgb(31, 31, 31);
+  padding: 25px;
+}
+
+.item-wrapper {
+  background-color: #4b4b4b;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.item-wrapper li {
+  display: flex;
+  align-items: center;
+}
+
+.expense-date  {
+  width: 80px;
+  height: 80px;
+  color: white;
+  border: 1px solid #ececec;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.expense-title {
+  color: white;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0px 15px;
+}
+
+.expense-amount {
+  border: 1px solid #ececec;
+  color: white;
+  background-color: #40005d;
+  font-size: 1.5rem;
+  padding: 15px;
+}
