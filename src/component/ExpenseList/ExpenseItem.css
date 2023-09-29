@@ -1,0 +1,11 @@
+.item-wrapper {
+  background-color: #4b4b4b;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.item-wrapper li {
+  display: flex;
+  align-items: center;
+}

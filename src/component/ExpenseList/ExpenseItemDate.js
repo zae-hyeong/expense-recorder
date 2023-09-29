@@ -2,12 +2,17 @@ import React from 'react'
 import Card from '../UI/Card'
 import './ExpenseItemDate.css'
 
-export const ExpenseItemDate = () => {
+export const ExpenseItemDate = (props) => {
+
+  const month = props.date.toLocaleString('ko-KR', { month: 'long' });
+  const day = props.date.toLocaleString('en-US', { day: '2-digit' });
+  const year = props.date.getFullYear();
+
   return (
     <Card className='expense-date'>
-      <div className='expense-date__month'>August</div>
-      <div className='expense-date__year'>2020</div>
-      <div className='expense-date__day'>14</div>
+      <div className='expense-date__year'>{year}</div>
+      <div className='expense-date__month'>{month}</div>
+      <div className='expense-date__day'>{day}</div>
   </Card>
   )
 }

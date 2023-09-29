@@ -5,12 +5,12 @@ import ExpenseItem from './ExpenseItem'
 
 const ExpenseList = (props) => {
 
-  // const ExpenseItem = props.items;
+  const expenseItems = props.expenseList;
 
   return (
     <Card className='list-wrapper'>
       <ul>
-        <ExpenseItem/>
+        {expenseItems.map(expenseItem => <ExpenseItem expenseItemData={expenseItem}/>)}
       </ul>
     </Card>
   )
