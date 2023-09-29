@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import ExpenseList from './component/ExpenseList/ExpenseList';
 import NewExpenseForm from './component/NewExpense/NewExpenseForm';
@@ -26,11 +27,20 @@ const dummyExpenses = [
 ];
 
 function App() {
+
+  const [expenseList, setExpenseList] = useState(dummyExpenses);
+
+  const addExpenseItem = (newExpense) => {
+    setExpenseList((expenseList) => {
+      return [...expenseList, newExpense];
+    })
+  }
+
   return (
     <div className="App">
       <Wrapper>
-        <NewExpenseForm/>
-        <ExpenseList expenseList={dummyExpenses}/>
+        <NewExpenseForm onAddExpenseItem={addExpenseItem}/>
+        <ExpenseList expenseList={expenseList} />
       </Wrapper>
     </div>
   );

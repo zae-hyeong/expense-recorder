@@ -31,3 +31,22 @@
   background-color: #510674;
   border-color: #510674;
 }
+
+#input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#input-wrapper label {
+  margin-right: 8px;
+}
+
+#input-wrapper input {
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  padding: 4px;
+  border-radius: 8px;
+}
