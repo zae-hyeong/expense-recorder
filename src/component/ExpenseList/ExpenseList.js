@@ -20,7 +20,7 @@ const ExpenseList = (props) => {
         <YearFilter onGetFilterYear={onGetFilterYear} />
         {expenseItems
           .filter(expenseItem => expenseItem.date.getFullYear() === filterYear)
-          .map(expenseItem => <ExpenseItem expenseItemData={expenseItem} />)}
+          .map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />)}
       </ul>
     </Card>
   )

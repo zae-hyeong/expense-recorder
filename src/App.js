@@ -20,7 +20,7 @@ function App() {
 
   const addExpenseItem = (newExpense) => {
     setExpenseList((expenseList) => {
-      return [...expenseList, newExpense];
+      return [newExpense, ...expenseList];
     })
   }
 
