@@ -1,0 +1,23 @@
+.year-filter-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.year-filter-wrapper > label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.year-filter-wrapper > select { 
+  display: block;
+  float: right;
+  padding: 10px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 10px;
+  position: relative;
+  bottom: 6px;
+}
