@@ -19,9 +19,11 @@ const ExpenseList = (props) => {
     <Card className='list-wrapper'>
       <ul>
         <YearFilter onGetFilterYear={onGetFilterYear} />
-        <Chart filteredExpenseItems={expenseItems}/>
         { !expenseItems.length ? (<p className='no-expense-msg'>Nothing expensed</p>) : (
-          expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />))
+          <div>
+            <Chart filteredExpenseItems={expenseItems}/>
+            {expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />)}
+          </div>)
         }
       </ul>
     </Card>
