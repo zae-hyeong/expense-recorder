@@ -40,26 +40,26 @@ const NewExpenseForm = (props) => {
       <form onSubmit={submitHandler}>
         <div id='input-wrapper'>
         <div>
-          <label for='dateInput'>Date</label>
+          <label htmlFor='dateInput'>Date</label>
           <input name='date' type='date' id='dateInput'
             value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
         <div>
-          <label for='titleInput'>Title</label>
+          <label htmlFor='titleInput'>Title</label>
           <input name='title' type='text' id='titleInput'
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
         <div>
-          <label for='amountInput'>Amount</label>
+          <label htmlFor='amountInput'>Amount</label>
           <input name='amount' type='number' id='amountInput' min={0}
             value={enteredAmount}
             onChange={amountChangeHandler}
           />
-          <label for='amountInput'>원</label>
+          <label htmlFor='amountInput'>원</label>
         </div>
       </div>
         <button type='submit' className='submit-new-expense'>Record</button>

@@ -22,6 +22,7 @@ const Chart = (props) => {
   props.filteredExpenseItems.map(datas => {
     maxExpense += datas.amount;
     monthlyExpenses[datas.date.getMonth()].totalExpense += datas.amount;
+    return 0;
   });
 
   return (

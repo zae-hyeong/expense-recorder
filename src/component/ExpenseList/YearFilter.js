@@ -9,7 +9,7 @@ const YearFilter = (props) => {
 
   return (
     <div className='year-filter-wrapper'>
-      <label for='year-filter'>Filter by year</label>
+      <label htmlFor='year-filter'>Filter by year</label>
       <select name='year-filter' id='year-filter' onChange={yearChangeHandler}>
         <option value={2020}>2020</option>
         <option value={2021}>2021</option>
