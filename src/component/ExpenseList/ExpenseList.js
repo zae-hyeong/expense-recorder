@@ -6,21 +6,21 @@ import YearFilter from './YearFilter'
 
 const ExpenseList = (props) => {
 
-  const expenseItems = props.expenseList;
-
   const [filterYear, setFilterYear] = useState(2020);
 
   const onGetFilterYear = (filterYear) => {
     setFilterYear(filterYear)
   }
 
+  const expenseItems = props.expenseList.filter(expenseItem => expenseItem.date.getFullYear() === filterYear);
+
   return (
     <Card className='list-wrapper'>
       <ul>
         <YearFilter onGetFilterYear={onGetFilterYear} />
-        {expenseItems
-          .filter(expenseItem => expenseItem.date.getFullYear() === filterYear)
-          .map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />)}
+        { !expenseItems.length ? (<p className='no-expense-msg'>Nothing expensed</p>) : (
+          expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />))
+        }
       </ul>
     </Card>
   )

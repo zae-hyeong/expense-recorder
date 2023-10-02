@@ -31,3 +31,10 @@
   font-size: 1.5rem;
   padding: 15px;
 }
+
+.no-expense-msg {
+  margin-top: 25px;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+}
