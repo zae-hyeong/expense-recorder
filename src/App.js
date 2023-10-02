@@ -3,6 +3,7 @@ import './App.css';
 import ExpenseList from './component/ExpenseList/ExpenseList';
 import NewExpenseForm from './component/NewExpense/NewExpenseForm';
 import Wrapper from './component/UI/Wrapper';
+import Chart from './component/Chart/Chart';
 
 const dummyExpenses = [
   { id: 'e1', title: 'Toilet Paper', amount: 5000, date: new Date(2020, 7, 14), },
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <Wrapper>
         <NewExpenseForm onAddExpenseItem={addExpenseItem}/>
+        <Chart/>
         <ExpenseList expenseList={expenseList} />
       </Wrapper>
     </div>
