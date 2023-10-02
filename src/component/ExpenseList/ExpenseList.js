@@ -3,6 +3,7 @@ import './ExpenseList.css'
 import Card from '../UI/Card'
 import ExpenseItem from './ExpenseItem'
 import YearFilter from './YearFilter'
+import Chart from '../Chart/Chart'
 
 const ExpenseList = (props) => {
 
@@ -18,6 +19,7 @@ const ExpenseList = (props) => {
     <Card className='list-wrapper'>
       <ul>
         <YearFilter onGetFilterYear={onGetFilterYear} />
+        <Chart filteredExpenseItems={expenseItems}/>
         { !expenseItems.length ? (<p className='no-expense-msg'>Nothing expensed</p>) : (
           expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />))
         }
