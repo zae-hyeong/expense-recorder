@@ -24,6 +24,7 @@ const NewExpenseForm = (props) => {
     e.preventDefault()
 
     const newExpense = {
+      id: 'e' + (props.listLength + 1),
       title: enteredTitle,
       date: new Date(enteredDate),
       amount: enteredAmount

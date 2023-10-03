@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Wrapper>
-        <NewExpenseForm onAddExpenseItem={addExpenseItem}/>
+        <NewExpenseForm onAddExpenseItem={addExpenseItem} listLength={dummyExpenses.length}/>
         <ExpenseList expenseList={expenseList} />
       </Wrapper>
     </div>
