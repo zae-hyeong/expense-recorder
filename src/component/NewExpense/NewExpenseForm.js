@@ -8,6 +8,8 @@ const NewExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
+  const [idNum, setIdNum] = useState(props.listLength + 1);
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -24,16 +26,17 @@ const NewExpenseForm = (props) => {
     e.preventDefault()
 
     const newExpense = {
-      id: 'e' + (props.listLength + 1),
+      id: 'e' + idNum,
       title: enteredTitle,
-      date: new Date(enteredDate),
-      amount: enteredAmount
+      amount: Number(enteredAmount),
+      date: new Date(enteredDate)
     }
 
     props.onAddExpenseItem(newExpense);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    setIdNum(num => num+1);
   }
   
   return (
