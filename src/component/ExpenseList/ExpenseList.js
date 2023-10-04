@@ -14,7 +14,6 @@ const ExpenseList = (props) => {
   }
 
   const expenseItems = props.expenseList.filter(expenseItem => expenseItem.date.getFullYear() === filterYear);
-  console.log(expenseItems);
 
   return (
     <Card className='list-wrapper'>
