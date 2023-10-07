@@ -3,7 +3,7 @@ import './ChartBar.css'
 
 const ChartBar = (props) => {
 
-  const chartBarHeignt = (props.monthlyExpense.totalExpense/props.maxExpense) * 100 + '%';
+  const chartBarHeignt = props.maxExpense ? Math.round((props.monthlyExpense.totalExpense/props.maxExpense) * 100) + '%' : 0;
 
   return (
     <div className='chart-bar-wrapper'>
