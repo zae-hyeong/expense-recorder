@@ -29,7 +29,7 @@ function App() {
   const [expenseList, setExpenseList] = useState(dummyExpenses);
   const [alertMsg, setAlertMsg] = useState('');
 
-  const addExpenseItem = (newExpense) => {
+  const addExpenseItemHandler = (newExpense) => {
     setExpenseList((expenseList) => {
       return [newExpense, ...expenseList];
     })
@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <Wrapper>
-        <NewExpenseForm onAddExpenseItem={addExpenseItem} listLength={dummyExpenses.length} onSetAlert={onSetAlert}/>
+        <NewExpenseForm listLength={dummyExpenses.length} onAddExpenseItem={addExpenseItemHandler} onSetAlert={onSetAlert}/>
         <ExpenseList expenseList={expenseList} onRemoveExpenseItem={removeExpenseItemHandler}/>
       </Wrapper>
       {alertMsg? (<Alert onSetAlert={onSetAlert} contents={alertMsg}/>) : (<div></div>) }

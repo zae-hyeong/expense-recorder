@@ -9,11 +9,11 @@ const ExpenseList = (props) => {
 
   const [filterYear, setFilterYear] = useState(2020);
 
-  const onGetFilterYear = (filterYear) => {
+  const getFilterYearHandler = (filterYear) => {
     setFilterYear(filterYear)
   }
 
-  const onClickItemHandler = (id) => {
+  const clickItemHandler = (id) => {
     props.onRemoveExpenseItem(id);
   }
 
@@ -22,11 +22,11 @@ const ExpenseList = (props) => {
   return (
     <Card className='list-wrapper'>
       <ul>
-        <YearFilter onGetFilterYear={onGetFilterYear} />
+        <YearFilter onGetFilterYear={getFilterYearHandler} />
         <Chart filteredExpenseItems={expenseItems}/>
         { !expenseItems.length ? (<p className='no-expense-msg'>Nothing expensed</p>) : (
           <div>
-            {expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} onClickItem={onClickItemHandler}/>)}
+            {expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} onClickItem={clickItemHandler}/>)}
           </div>)
         }
       </ul>
