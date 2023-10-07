@@ -16,22 +16,6 @@
   justify-content: center;
 }
 
-.expense-title {
-  color: white;
-  flex-grow: 1;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0px 15px;
-}
-
-.expense-amount {
-  border: 1px solid #ececec;
-  color: white;
-  background-color: #40005d;
-  font-size: 1.5rem;
-  padding: 15px;
-}
-
 .no-expense-msg {
   margin-top: 25px;
   color: white;

@@ -35,6 +35,12 @@ function App() {
     })
   }
 
+  const removeExpenseItemHandler = (id) => {
+    setExpenseList((expenseList) => {
+      return expenseList.filter(expenseItem => expenseItem.id !== id);
+    })
+  }
+
   const onSetAlert = (msg) => {
     setAlertMsg(msg);
   }
@@ -43,7 +49,7 @@ function App() {
     <div className="App">
       <Wrapper>
         <NewExpenseForm onAddExpenseItem={addExpenseItem} listLength={dummyExpenses.length} onSetAlert={onSetAlert}/>
-        <ExpenseList expenseList={expenseList} />
+        <ExpenseList expenseList={expenseList} onRemoveExpenseItem={removeExpenseItemHandler}/>
       </Wrapper>
       {alertMsg? (<Alert onSetAlert={onSetAlert} contents={alertMsg}/>) : (<div></div>) }
     </div>

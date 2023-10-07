@@ -13,6 +13,10 @@ const ExpenseList = (props) => {
     setFilterYear(filterYear)
   }
 
+  const onClickItemHandler = (id) => {
+    props.onRemoveExpenseItem(id);
+  }
+
   const expenseItems = props.expenseList.filter(expenseItem => expenseItem.date.getFullYear() === filterYear);
 
   return (
@@ -22,7 +26,7 @@ const ExpenseList = (props) => {
         <Chart filteredExpenseItems={expenseItems}/>
         { !expenseItems.length ? (<p className='no-expense-msg'>Nothing expensed</p>) : (
           <div>
-            {expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} />)}
+            {expenseItems.map(expenseItem => <ExpenseItem key={expenseItem.id} expenseItemData={expenseItem} onClickItem={onClickItemHandler}/>)}
           </div>)
         }
       </ul>
