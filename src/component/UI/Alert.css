@@ -1,0 +1,44 @@
+.alert-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #00000070;
+}
+
+.alert-card {
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alert-msg {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.alert-close {
+  cursor: pointer;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  padding: 10px 20px;
+
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}

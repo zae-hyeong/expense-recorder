@@ -25,6 +25,11 @@ const NewExpenseForm = (props) => {
   const submitHandler = (e) => {
     e.preventDefault()
 
+    if (!enteredTitle || !enteredAmount || !enteredDate) {
+      props.onSetAlert('Input Form');
+      return;
+    }
+
     const newExpense = {
       id: 'e' + idNum,
       title: enteredTitle,
